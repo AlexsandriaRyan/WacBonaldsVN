@@ -5,8 +5,9 @@
 # 1. Make the characters reappear towards the front whenever they have a line
 # 2. Dim the background when the power goes off
 # 3. Make characters' sprites dim whenever they aren't speaking
-# 4. Make the voices sound replace the bg music. Restart bg music after Work Friend says she can't hear anything
-# 5. Consider separating each scene into chapters for easier reading?
+# 4. Consider separating each scene into chapters for easier reading?
+# 5. Rename chapter 1 as "character select" or something
+# 6. Fix loading menu to go back to left-align when not on main screen
 
 label start:
 
@@ -78,7 +79,7 @@ label start:
     show friend normal at center
     with dissolve
 
-    menu drive_thru:
+    menu:
 
         w4.c "You ready to give it a try?"
 
@@ -105,7 +106,7 @@ label start:
 
     $ customer = Character("Customer")
 
-    menu customer_1:
+    menu:
         customer "Hello...? Anyone there???? HeeeelllooooooOOOOOOO..."
 
         "Uhhhh...":
@@ -114,7 +115,7 @@ label start:
         "Welcome to WacBonald's! How can I help you?":
             customer "Finally!! Some service!"
 
-    menu customer_2:
+    menu:
         customer "Give me 40 WacNuggets and Sweet 'n' Extra Sweet sauce!!"
 
         "Sure thing! Would you like fries with that?":
@@ -198,17 +199,18 @@ label start:
     w1.c "Absolutely not!! That customer was horrifying! She was rude and had VAMPIRE TEETH. It's not even Halloween..."
 
     $ current_date = datetime.datetime.today()
+    $ current_date_month = current_date.strftime("%B")
+    $ current_date_formatted = current_date.strftime("%m %d")
 
-    if (current_date.month == 10 & current_date.day == 31):
+    if (current_date_formatted == "10 31"):
         p.c "Today is Halloween, actually."
         
         show shy cry
         w1.c "W... what??? Is my memory slipping...? I have to get out of this place before it's too late..."
 
-# REMOVE THIS LATER, TEST ON HALLOWEEN
     else:
         "It is not halloween.
-        Today is [current_date.month] [current_date.day]."
+        Today is [current_date_month] [current_date.day]."
 
 
 
@@ -225,7 +227,7 @@ label start:
 
     w1.c "What... was.......... that?"
 
-    play music "6.mp3" fadein 1 volume 0.5
+    play music "6.mp3" fadein 1.0 volume 0.5
 
     show shy surprised 1 at center
     with move
@@ -233,7 +235,7 @@ label start:
     show neutral normal at right
     with moveinright
 
-    menu hear:
+    menu:
         w2.c "Did you guys hear that?"
 
         "No":
@@ -258,7 +260,9 @@ label start:
     show shy worried at right
     with move
 
-    play sound "voices.mp3"
+    stop music fadeout 2.0
+
+    play music "voices.mp3" fadein 1.0
 
     "You look out the drivethru window to see that a giant sinkhole has taken place of the drivethru, consuming all customers and their vehicles within it."
     "An ominous, spooky, frightful, smelly, bewildering, sound of voices echoes from the depths of the sinkhole."
@@ -274,6 +278,10 @@ label start:
     stop sound
 
     show friend happy
+
+    stop music fadeout 2.0
+
+    play music "6.mp3" fadein 1.0 volume 0.5
 
     w4.c "I don't hear anything, [p.name].
     Maybe the manager will let us close up the store! A sinkhole is definitely too much of a hazard to stay open!"
@@ -319,7 +327,7 @@ label start:
 
     w4.c "Yeah, that sinkhole poses a working hazard. We really should put our workers' safety first."
 
-    menu safety:
+    menu:
         m "Do I look like the type to care about workers' rights or 'safety first'? Get back to your stations, now."
 
         "I don't think so! Stop being a meanie weanie and close up this dang WacBonald's!":
@@ -344,7 +352,7 @@ label start:
     hide mean bored
     with moveoutleft
 
-    menu ask_boss:
+    menu:
         "I'm so sorry, boss - can you please forgive me and forgo the writeup? :(":
             show manager angry
             m "What did I say about asking questions, [p.name]? That's two writeups now."
@@ -450,7 +458,7 @@ label start:
 
     while friend_check == False:
 
-        menu friends:
+        menu:
             w4.c "We ARE friends, right?"
 
             "I literally just met you today...":
@@ -472,7 +480,7 @@ label start:
 
     show friend angry 1
 
-    menu get_manager:
+    menu:
         w4.c "I wouldn't do that if I were you."
 
         "Get the manager anyway":
@@ -561,7 +569,7 @@ label start:
     show friend angry 2 at left
     with moveinleft
 
-    menu guilty:
+    menu:
         w4.c "Hold it!! [p.name] probably didn't do this!"
 
         "Probably?":

@@ -1,44 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 1545, in prepare_screen
-    screen pick_character():
-  File "game/screens.rpy", line 1545, in prepare
-    screen pick_character():
-  File "game/screens.rpy", line 1547, in prepare
-    imagebutton:
-  File "game/screens.rpy", line 1547, in prepare
-    imagebutton:
-  File "game/screens.rpy", line 1548, in <module>
-    idle "mean/mean_idle.png".picture
-AttributeError: 'str' object has no attribute 'picture'
+While running game code:
+  File "game/story/chapter0.rpy", line 202, in script
+    if (current_date.month == 10 && current_date.day == 31):
+SyntaxError: invalid syntax (game/story/chapter0.rpy, line 202)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\main.py", line 670, in main
-    run(restart)
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\main.py", line 93, in run
-    renpy.display.screen.prepare_screens()
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\display\screen.py", line 1003, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 1545, in prepare_screen
-    screen pick_character():
-  File "game/screens.rpy", line 1545, in prepare
-    screen pick_character():
-  File "game/screens.rpy", line 1547, in prepare
-    imagebutton:
-  File "game/screens.rpy", line 1547, in prepare
-    imagebutton:
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/screens.rpy", line 1548, in <module>
-    idle "mean/mean_idle.png".picture
-AttributeError: 'str' object has no attribute 'picture'
+  File "game/story/chapter0.rpy", line 202, in script
+    if (current_date.month == 10 && current_date.day == 31):
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2133, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1151, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1088, in py_compile
+    raise e
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1034, in py_compile
+    raise orig_e
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1027, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/story/chapter0.rpy, line 202)
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.3.23091805
 WacBonalds 1.0
-Wed Oct 25 21:52:10 2023
+Tue Oct 31 17:35:18 2023

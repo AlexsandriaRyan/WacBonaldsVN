@@ -1540,7 +1540,7 @@ screen start_chapter1():
         text_color "#fff"
 
         # action
-        action Jump("chapter1")
+        action [Play("sound", "bell.mp3"), Jump("chapter1")]
 
 screen pick_character():
     # mean

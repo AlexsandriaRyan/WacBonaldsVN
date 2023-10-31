@@ -16,6 +16,6 @@ label chapter1:
     scene restaurant
     with fade
 
-    call screen pick_character
+    call screen pick_character with dissolve
 
     return
