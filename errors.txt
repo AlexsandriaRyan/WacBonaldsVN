@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 1558: 'aaction' is not a keyword argument or valid child of the imagebutton statement.
+    aaction Jump("talk_shy")
+           ^
+
+Ren'Py Version: Ren'Py 8.1.3.23091805
+Wed Oct 25 22:08:50 2023
