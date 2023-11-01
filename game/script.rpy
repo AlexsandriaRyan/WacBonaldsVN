@@ -1,10 +1,11 @@
 ﻿init python:
 
     class Player:
-        def __init__(self, character, name, evidence_collected = 0):
+        def __init__(self, character, name, evidence_collected = 0, conversations_had = 0):
             self.c = character
             self.name = name
             self.evidence_collected = evidence_collected
+            self.conversations_had = conversations_had
 
     class Worker:
         def __init__(self, character, name, conversations):

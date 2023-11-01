@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1543: 'Jump' is not a keyword argument or valid child of the textbutton statement.
-    action Play("sound", "bell.mp3") Jump("chapter1")
-                                         ^
+File "game/story/chapter4.rpy", line 62: expected python_expression
+    elif:
+        ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Tue Oct 31 17:51:54 2023
+Wed Nov  1 19:46:14 2023

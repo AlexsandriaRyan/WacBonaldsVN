@@ -1,3 +1,5 @@
+# ---------- FRIEND WORKER CONVERSATIONS ----------
+
 label talk_friend:
     if w4.conversations == 3:
         "3: [w4.name] has [w4.conversations] remaining"

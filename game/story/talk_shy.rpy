@@ -1,4 +1,7 @@
+# ---------- SHY WORKER CONVERSATIONS ----------
 label talk_shy:
+
+    # Check remaining conversations and jump to appropriate label
     if w1.conversations == 2:
         jump shy_2
                 
@@ -7,6 +10,10 @@ label talk_shy:
         
     else:
         jump shy_0
+
+
+
+# ---------- 2 Conversations Remaining ----------
 
 label shy_2:
     "[w1.name] has [w1.conversations] remaining"
@@ -32,6 +39,7 @@ label shy_2:
             w1.c "Thank you, [p.name]..."
 
         "It wasn't that bad. Not like she was left around to rot, it was still fresh.":
+            w4.c "Please get away from me."
             jump shy_2_fail
     
 
@@ -48,9 +56,13 @@ label shy_2:
             jump shy_2_pass
 
 label shy_2_fail:
-    $ w1.conversations -= 1
+    hide shy
+    with dissolve
 
-    return
+    $ w1.conversations -= 1
+    $ p.conversations_had += 1
+
+    jump conversations
 
 label shy_2_pass:
     show shy worried at center
@@ -65,28 +77,42 @@ label shy_2_pass:
 
     "[w1.name] sobs uncontrollably. You give her a quick hug and move away as to give her some space. She needs some time right now."
 
+    hide shy
+    with dissolve
+
     $ w1.conversations -= 1
     $ p.evidence_collected += 1
+    $ p.conversations_had += 1
 
-    return
+    jump conversations
+
+
+
+# ---------- 1 Conversation Remaining ----------
 
 label shy_1:
     "1: [w1.name] has [w1.conversations] remaining"
 
-    return
+    jump conversations
 
 label shy_1_fail:
     $ w1.conversations -= 1
+    $ p.conversations_had += 1
 
-    return
+    jump conversations
 
 label shy_1_pass:
     $ w1.conversations -= 1
     $ p.evidence_collected += 1
+    $ p.conversations_had += 1
 
-    return
+    jump conversations
+
+
+
+# ---------- 0 Conversations Remaining ----------
 
 label shy_0:
     "0: [w1.name] has [w1.conversations] remaining"
 
-    return
+    jump conversations

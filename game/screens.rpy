@@ -1526,7 +1526,12 @@ screen quick_menu():
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
 
-screen start_chapter1():
+# Custom Screens
+
+transform night:
+    matrixcolor TintMatrix("#7FA5F2")
+
+screen start_conversations():
     textbutton _("START"):
         # button styles
         xysize(100, 75)
@@ -1540,7 +1545,7 @@ screen start_chapter1():
         text_color "#fff"
 
         # action
-        action [Play("sound", "bell.mp3"), Jump("chapter1")]
+        action [Play("sound", "bell.mp3"), Jump("chapter4")]
 
 screen pick_character():
     # mean
@@ -1570,6 +1575,8 @@ screen pick_character():
         hover "friend/friend_hover.png"
         align(0.95, 0.60)
         action Jump("talk_friend")
+
+# End Custom Screens
 
 style window:
     variant "small"
