@@ -15,9 +15,7 @@ label talk_shy:
 
 # ---------- 2 Conversations Remaining ----------
 
-label shy_2:
-    "[w1.name] has [w1.conversations] remaining"
-    
+label shy_2:    
     show shy worried at center
     with dissolve
 
@@ -39,7 +37,6 @@ label shy_2:
             w1.c "Thank you, [p.name]..."
 
         "It wasn't that bad. Not like she was left around to rot, it was still fresh.":
-            w4.c "Please get away from me."
             jump shy_2_fail
     
 
@@ -56,8 +53,12 @@ label shy_2:
             jump shy_2_pass
 
 label shy_2_fail:
+    w1.c "I..."
+
     hide shy
     with dissolve
+
+    "[w1.name] needs some space right now."
 
     $ w1.conversations -= 1
     $ p.conversations_had += 1
@@ -91,17 +92,76 @@ label shy_2_pass:
 # ---------- 1 Conversation Remaining ----------
 
 label shy_1:
-    "1: [w1.name] has [w1.conversations] remaining"
+    show shy worried at center
+    with dissolve
 
-    jump conversations
+    menu:
+        w1.c "Hello again."
 
+        "It's been a long day, huh?":
+            w1.c "Extremely..."
+
+        "Do you think I'm innocent now?":
+            jump shy_1_fail
+
+    show shy cry at center        
+
+    menu:
+        w1.c "Do you think we will get help soon?"
+
+        "I think so. Those raccoons must be getting tired out there, by now.":
+            show shy happy 1
+            "She smiles lightly."
+
+        "I really hope not... I'm afraid of what will happen next.":
+            jump afraid
+
+    menu:
+        w1.c "If today hadn't gone how it had, I feel like you would have done really well here."
+
+        "Thank you":
+            p.c "Hearing that means a lot. It was a pleasure working with you, even for a day."
+            jump shy_1_pass
+
+        "Thank you, but...":
+            p.c "I really don't think I enjoyed working here with you guys, so it probably wouldn't have worked out anyway."
+            jump shy_1_fail
+
+    menu afraid:
+        w1.c "Why would you be afraid, [p.name]?"
+
+        "Because, even if I prove my innocence to you all...":
+            p.c "I know you'll all see me differently. I know I didn't do it... but even being in this situation right now has altered my life forever. If I could rewind time, I would."
+            jump shy_1_pass
+
+        "Because I know what you all think of me...":
+            p.c "a monster."
+            p.c "Even if you believe deep down that I didn't do it, there's still a stain on my reputation."
+            jump shy_1_fail
+
+        "Because...":
+            p.c "You know... I don't think I can give you a valid reason, really."
+            jump shy_1_fail
+    
 label shy_1_fail:
+    show shy angry 1
+    w1.c "Please leave me alone."
+
+    hide shy
+    with dissolve
+
     $ w1.conversations -= 1
     $ p.conversations_had += 1
 
     jump conversations
 
 label shy_1_pass:
+    show shy happy 2
+    w1.c "I wish you the best of luck, [p.name]"
+
+    hide shy
+    with dissolve
+
     $ w1.conversations -= 1
     $ p.evidence_collected += 1
     $ p.conversations_had += 1
@@ -113,6 +173,4 @@ label shy_1_pass:
 # ---------- 0 Conversations Remaining ----------
 
 label shy_0:
-    "0: [w1.name] has [w1.conversations] remaining"
-
-    jump conversations
+    jump conversations_refresh

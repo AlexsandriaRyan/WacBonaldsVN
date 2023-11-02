@@ -2,7 +2,6 @@
 # ---------- CONVERSATIONS LOOP ----------
 
 label chapter4:
-    
     stop music fadeout 1.0
     pause(1.0)
     scene black
@@ -55,12 +54,15 @@ label chapter4:
     with dissolve
 
 label conversations:
-
     if p.conversations_had < 10:
         call screen pick_character with dissolve
 
     else:
         jump endgame
+
+label conversations_refresh:
+    call screen pick_character
+
 
 label endgame:
     # put different endings here
