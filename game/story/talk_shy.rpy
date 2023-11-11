@@ -1,6 +1,5 @@
 # ---------- SHY WORKER CONVERSATIONS ----------
 label talk_shy:
-
     # Check remaining conversations and jump to appropriate label
     if w1.conversations == 2:
         jump shy_2
@@ -53,6 +52,8 @@ label shy_2:
             jump shy_2_pass
 
 label shy_2_fail:
+    #$ renpy.fix_rollback()
+
     w1.c "I..."
 
     hide shy
@@ -60,12 +61,18 @@ label shy_2_fail:
 
     "[w1.name] needs some space right now."
 
-    $ w1.conversations -= 1
-    $ p.conversations_had += 1
+    # Double-check that the conversation variables align.
+    # This prevents the variables from updating again if the 
+    # player selects the "back" option
+    if w1.conversations == 2:
+        $ w1.conversations -= 1
+        $ p.conversations_had += 1
 
     jump conversations
 
 label shy_2_pass:
+    #$ renpy.fix_rollback()
+
     show shy worried at center
 
     w1.c "I want to believe you. It's just..."
@@ -81,9 +88,13 @@ label shy_2_pass:
     hide shy
     with dissolve
 
-    $ w1.conversations -= 1
-    $ p.evidence_collected += 1
-    $ p.conversations_had += 1
+    # Double-check that the conversation variables align.
+    # This prevents the variables from updating again if the 
+    # player selects the "back" option
+    if w1.conversations == 2:
+        $ w1.conversations -= 1
+        $ p.conversations_had += 1
+        $ p.innocence += 1
 
     jump conversations
 
@@ -144,27 +155,39 @@ label shy_1:
             jump shy_1_fail
     
 label shy_1_fail:
+    #$ renpy.fix_rollback()
+
     show shy angry 1
     w1.c "Please leave me alone."
 
     hide shy
     with dissolve
 
-    $ w1.conversations -= 1
-    $ p.conversations_had += 1
+    # Double-check that the conversation variables align.
+    # This prevents the variables from updating again if the 
+    # player selects the "back" option
+    if w1.conversations == 1:
+        $ w1.conversations -= 1
+        $ p.conversations_had += 1
 
     jump conversations
 
 label shy_1_pass:
+    #$ renpy.fix_rollback()
+
     show shy happy 2
     w1.c "I wish you the best of luck, [p.name]"
 
     hide shy
     with dissolve
 
-    $ w1.conversations -= 1
-    $ p.evidence_collected += 1
-    $ p.conversations_had += 1
+    # Double-check that the conversation variables align.
+    # This prevents the variables from updating again if the 
+    # player selects the "back" option
+    if w1.conversations == 1:
+        $ w1.conversations -= 1
+        $ p.conversations_had += 1
+        $ p.innocence += 1
 
     jump conversations
 
