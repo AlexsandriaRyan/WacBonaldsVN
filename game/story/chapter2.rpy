@@ -206,9 +206,11 @@ label chapter2:
 
     "[w3.name] goes to sit down at a table by himself."
 
+    m "Typical [w3.name], he'll never change, huh?"
+
     show manager normal
 
-    m "Not much we can do about that now, so let's try our best to clean up and keep ourselves busy. I'll be in my office."
+    m "Not much we can do about it now, so let's try our best to clean up and keep ourselves busy. I'll be in my office."
 
     hide manager normal
     with moveoutright

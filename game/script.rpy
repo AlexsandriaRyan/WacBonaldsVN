@@ -1,11 +1,14 @@
 ﻿init python:
 
     class Player:
-        def __init__(self, character, name, innocence = 0, conversations_had = 0):
+        def __init__(self, character, name, innocence = 0, conversations_had = 0, cat = False, mom = False):
             self.c = character
             self.name = name
             self.innocence = innocence
             self.conversations_had = conversations_had
+            self.cat = cat
+            self.mom = mom
+
 
     class Worker:
         def __init__(self, character, name, conversations):

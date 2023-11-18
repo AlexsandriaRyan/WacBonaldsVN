@@ -122,6 +122,7 @@ label neutral_1:
         "What's at home?":
             show neutral normal at center
             w2.c "My cats."
+            $ p.cat = True
 
     p.c "You didn't strike me as a cat person! How many?"
 

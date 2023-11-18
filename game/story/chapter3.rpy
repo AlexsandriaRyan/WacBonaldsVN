@@ -146,11 +146,15 @@ label chapter3:
 
     "[w1.name] runs back to the restaurant, holding her face, sobbing."
 
-    w3.c "You get written up TWICE and this is what you do to the manager?? That's not how you keep a job, you psycho!"
+    w3.c "You get written up TWICE and this is what you do to her?? That's not how you keep a job, you psycho!"
 
     with vpunch
 
     "[w3.name] tries to grab you by the arm."
+
+    show mean sad
+
+    w3.c "How dare you..."
 
     show friend angry 2 at left
     with moveinleft
