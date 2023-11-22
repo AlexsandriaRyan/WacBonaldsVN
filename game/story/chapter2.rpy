@@ -196,12 +196,12 @@ label chapter2:
 
     m "Silver linings, guys, there's no customers in the store, and it looks like we're stuck here. Let's close up for now until we're rescued."
 
-    show mean angry at center
+    show mean angry 1 at center
     with moveinleft
 
     w3.c "We can't even leave if we wanted to, now?! We should have just left when we should! For God's sake, I hate it here. You're all insufferable."
 
-    hide mean angry
+    hide mean angry 1
     with moveoutleft
 
     "[w3.name] goes to sit down at a table by himself."

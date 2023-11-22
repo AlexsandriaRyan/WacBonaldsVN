@@ -117,7 +117,7 @@ label chapter3:
 
     w3.c "What in the -"
 
-    show mean angry
+    show mean angry 1
     w3.c "WHAT DID YOU DO???"
 
     show neutral normal at right
@@ -185,12 +185,12 @@ label chapter3:
     hide neutral angry 1
     with moveoutright
 
-    show mean angry at right
+    show mean angry 1 at right
     with move
 
     w3.c "I've got my eyes on you, [p.name]."
 
-    hide mean angry
+    hide mean angry 1
     with moveoutright
 
     show friend worried
