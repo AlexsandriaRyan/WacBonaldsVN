@@ -54,15 +54,13 @@ label chapter4:
     with dissolve
 
 label conversations:
+    # if the player has not yet had 10 conversations, reload pick_character scene
     if p.conversations_had < 10:
         call screen pick_character with dissolve
 
+    # once the player has had 10 conversations, move on to chapter 5
     else:
-        jump endgame
+        jump chapter5
 
 label conversations_refresh:
     call screen pick_character
-
-
-label endgame:
-    # put different endings here
