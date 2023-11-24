@@ -213,7 +213,7 @@ label chapter3:
 
     pause (1.0)
 
-    show text "HOW TO PLAY:\nTake part in 10 conversations with your fellow coworkers.\nCollect evidence to prove your innocence by selecting the right dialogue options."
+    show text "{color=#f00}HOW TO PLAY:{/color}\n{color=#fff}Take part in 10 conversations with your fellow coworkers.\nCollect evidence to prove your innocence by selecting the right dialogue options.{/color}"
     with Dissolve (2.0)
 
     call screen start_conversations with dissolve
