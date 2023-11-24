@@ -4,8 +4,7 @@
 # TODO
 # 1. Make the characters reappear towards the front whenever they have a line
 # 2. Make characters' sprites dim whenever they aren't speaking
-# 3. Fix loading menu to go back to left-align when not on main screen
-# 4. Find new bg music asset for power outage? Something creepy maybe?
+# 3. Find new bg music asset for power outage? Something creepy maybe?
 
 
 label start:
