@@ -214,11 +214,26 @@ label friend_2_fail_kill:
     if w4.conversations == 2:
         $ w4.conversations -= 1
         $ p.conversations_had += 1
-        p.crazy = True
+        $ p.crazy = True
 
     jump conversations
 
 label friend_2_pass:
+    show friend surprised at center
+
+    w4.c "You'd really let them go?"
+    
+    p.c "I mean, yeah. For all we know, the managers death was a mistake."
+    p.c "It's not really our decision to make."
+    p.c "This also isn't Danganronpa."
+
+    show friend happy at center
+
+    w4.c "You're so right, [p.name]!"
+    w4.c "I had the same thoughts, too. Glad we're on the same page."
+
+    hide friend
+    with dissolve
 
     # Double-check that the conversation variables align.
     # This prevents the variables from updating again if the 
@@ -228,13 +243,124 @@ label friend_2_pass:
         $ p.conversations_had += 1
         $ p.innocence += 1
 
+    jump conversations
+
 
 
 # ---------- 1 Conversation Remaining ----------
 
 label friend_1:
+    if p.crazy == True:
+        jump friend_1_crazy
+
+    show friend happy at center
+    with dissolve
+
+    menu:
+        w4.c "Hello, hello, hello!"
+
+        "Hello!":
+            show friend normal at center
+
+        "Energetic today, are we?":
+            show friend surprised at center
+            w4.c "Oh, yes actually. I've snuck about 7 cups of coffee throughout the day today."
+            show friend worried 1 at center
+            w4.c "I'll have to get my heart checked once we get out of here..."
+
+        "RuPaul Charles?":
+            hide friend
+            with Dissolve(2.0)
+
+            show rupaul at center
+            with Dissolve (2.0)
+
+            w4.c "Shhhhh...."
+
+            hide rupaul
+            with Dissolve(2.0)
+
+            show friend happy at center
+            with Dissolve(2.0)
+
+            p.c "Did you just... transform into RuPaul Charles?"
+
+            show friend angry 1 at center
+            w4.c "How many times must we tell you to stop asking so many questions?"
+
+    show friend normal at center
+
+    menu:
+        w4.c "Well, are you excited to get out of here? It's been so long since we've been trapped."
+
+        "I don't...":
+            p.c "... I don't think we're going to make it out of here, honestly. I feel hopeless."
+
+            show friend surprised at center
+            w4.c "Don't say that!"
+
+            show friend happy at center
+            w4.c "We'll make it out safe and sound! Even if you end up in jail for what happened today, you'll still have a roof over your head and food to eat, right?"
+
+            p.c "... Right..."
+
+            jump friend_1_pass
+
+        "I want...":
+            p.c "... I want to find out who did it first."
+
+            show friend angry 3 at center
+            w4.c "What makes you say that, now? You're no detective."
+
+            play sound 'amongus.mp3'
+            
+            p.c "If the manager's death wasn't an accident, that means the killer is.... among us."
+
+            jump friend_1_fail
+
+
+label friend_1_crazy:
+    show friend worried 1 at center
+    with dissolve
+
+    menu:
+        w4.c "Oh, hi, [p.name]..."
+
+        "Are you doing OK?":
+            w4.c "Yeah, I'm feeling better."
+
+        "...":
+            show friend worried 2 at center
+            w4.c "Ahhh..."
+
+    show friend worried 2 at center
+
+    w4.c "Listen, I just want to say I'm sorry, OK?"
+    w4.c "I really went off the rails on you earlier."
+    
+    menu:
+        w4.c "Can you find it in your heart to forgive me? Friends have each others' backs, right?"
+
+        "Forgive":
+            jump friend_1_pass
+
+        "Don't forgive":
+            jump friend_1_fail
+
+        "... Right":
+            jump friend_1_fail
+
+    $ p.crazy == False
 
 label friend_1_fail:
+    show friend angry 3 at center
+    w4.c "Whatever..."
+
+    hide friend
+    with dissolve
+
+    p.c "Jeez, she's been acting super weird."
+    p.c "This whole situation must be getting to her..."
 
     # Double-check that the conversation variables align.
     # This prevents the variables from updating again if the 
@@ -243,8 +369,12 @@ label friend_1_fail:
         $ w4.conversations -= 1
         $ p.conversations_had += 1
 
-label friend_1_pass:
+    jump conversations
 
+label friend_1_pass:
+    show friend happy at center
+    w4.c "I'm so glad we're friends <3"
+    
     # Double-check that the conversation variables align.
     # This prevents the variables from updating again if the 
     # player selects the "back" option
@@ -252,6 +382,8 @@ label friend_1_pass:
         $ w4.conversations -= 1
         $ p.conversations_had += 1
         $ p.innocence += 1
+
+    jump conversations
 
 
 
