@@ -11,7 +11,6 @@
             self.crazy = crazy
             self.guess_murder = guess_murder
 
-
     class Worker:
         def __init__(self, character, name, conversations):
             self.c = character
