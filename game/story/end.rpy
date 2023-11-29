@@ -12,19 +12,19 @@ label end:
 
     police "It's the police, open up!!!"
 
-    if (p.innocence <= 2):
+    if p.innocence <= 2:
         jump bad_ending
 
-    elif (p.innocence >= 3 && p.innocence <= 8 && p.guess_murder == False):
+    elif p.innocence >= 3 and p.innocence <= 8 and p.guess_murder == False:
         jump incomplete_ending_1
 
-    elif (p.innocence >= 3 && p.guess_murder <= 8 && p.guess_murder == True):
+    elif p.innocence >= 3 and p.guess_murder <= 8 and p.guess_murder == True:
         jump complete_ending
 
-    elif (p.innocence >= 9 && p.guess_murder == False):
+    elif p.innocence >= 9 and p.guess_murder == False:
         jump incomplete_ending_2
     
-    elif (p.innocence >= 9 && p.guess_murder == True):
+    elif p.innocence >= 9 and p.guess_murder == True:
         jump good_ending
 
 
@@ -50,10 +50,9 @@ label bad_ending:
     police "We haven't got time to do a proper investigation, folks. We also only have one pair of handcuffs."
     police "Tell us who murdered the beloved WacBonald's manager!"
 
-
     "[w1.name], [w2.name], and [w3.name] look towards you."
 
-    w3.c "They did it. No doubt about it."
+    w3.c "[p.name] did it. No doubt about it."
 
     w2.c "It's the most likely scenario."
 
@@ -84,9 +83,10 @@ label bad_ending:
     scene black
     with fade
 
-    show text "{color=#fff}You were brought to a musty little jail cell, where you withered away until death.\nYou also didn't get the chance to consume any Chicken WacNuggets during your one and only shift at WacBonald's, by the way. How cruel!{/color}\n\n{color=#f00}THE (bad) END{/color}"
+    show text "{color=#fff}You were brought to a musty little jail cell, where you withered away until death.\nYou also didn't get the chance to consume any Chicken WacNuggets during your one and only shift at WacBonald's, by the way.How cruel!{/color}\n\n{color=#f00}THE (bad) END{/color}"
     with Dissolve (2.0)
 
+    call screen end with dissolve
 
 
 # ---------- INCOMPLETE ENDING 1----------
@@ -111,22 +111,24 @@ label incomplete_ending_1:
     police "We haven't got time to do a proper investigation, folks. We also only have one pair of handcuffs."
     police "Tell us who murdered the beloved WacBonald's manager!"
 
-    p.c "It was [accused.name]."
+    p.c "It was [accused]"
 
-    if (accused != "w1"):
-        w1.c "Y-yeah... I believe it was [accused.name], too."
+    if accused != w1.name:
+        w1.c "Y-yeah... I believe it was [accused], too."
 
-    if (accused != "w2"):
+    if accused != w2.name:
         w2.c "Agreed."
 
-    if (accused != "w3"):
+    if accused != w3.name:
         w3.c "Jail 'em!"
 
-
+    scene black
+    with fade
     
-    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n{/color}\n{color=#f00}[accused_info]\n\n(one of) THE (incomplete) END(s){/color}"
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
     with Dissolve (2.0)
 
+    call screen end with dissolve
 
 
 # ---------- COMPLETE ENDING ----------
@@ -135,9 +137,13 @@ label incomplete_ending_1:
 label complete_ending:
 
 
+    scene black
+    with fade
+
     show text "{color=#fff}\n{/color}\n\n{color=#f00}THE (sort-of complete) END{/color}"
     with Dissolve (2.0)
 
+    call screen end with dissolve
 
 
 # ---------- INCOMPLETE ENDING 2 ----------
@@ -147,10 +153,13 @@ label incomplete_ending_2:
 
 
 
+    scene black
+    with fade
 
     show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n{/color}\n{color=#f00}[accused_info]\n\n(one of) THE (incomplete) END(s){/color}"
     with Dissolve (2.0)
 
+    call screen end with dissolve
 
 
 # ---------- GOOD ENDING ----------
@@ -158,6 +167,10 @@ label incomplete_ending_2:
 # player chooses work friend to die
 label good_ending:
 
+    scene black
+    with fade
 
     show text "{color=#fff}\n{/color}\n{color=#f00}THE (good) END{/color}"
     with Dissolve (2.0)
+    
+    call screen end with dissolve

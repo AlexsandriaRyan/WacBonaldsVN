@@ -87,9 +87,8 @@ label neutral_2_pass:
     
 
 
-
-# ---------- 1 Conversations Remaining ----------    
-
+# ---------- 1 Conversations Remaining ----------
+    
 label neutral_1:
     show neutral normal at center
     with dissolve
@@ -122,7 +121,6 @@ label neutral_1:
         "What's at home?":
             show neutral normal at center
             w2.c "My cats."
-            $ p.cat = True
 
     p.c "You didn't strike me as a cat person! How many?"
 
@@ -135,6 +133,7 @@ label neutral_1:
         "And a half...?":
             show neutral happy at center
             w2.c "Oh, yeah, Carl. He was hit by a car last month, so I had his better-looking half taxidermied."
+            $ p.cat = True
 
         "Must have a big home for all those cats.":
             w2.c "Why are you so interested in my cats?"

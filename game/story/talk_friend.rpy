@@ -39,6 +39,7 @@ label friend_3:
     p.c "What's that supposed to mean?"
 
     show friend surprised at center
+    pause (1.0)
     show friend worried 1 at center
     with dissolve
 
@@ -374,6 +375,9 @@ label friend_1_fail:
 label friend_1_pass:
     show friend happy at center
     w4.c "I'm so glad we're friends <3"
+
+    hide friend
+    with dissolve
     
     # Double-check that the conversation variables align.
     # This prevents the variables from updating again if the 

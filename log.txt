@@ -1,16 +1,16 @@
-Sun Nov 26 14:09:35 2023
+Wed Nov 29 14:46:28 2023
 Windows-10-10.0.22621
 Ren'Py 8.1.3.23091805
  
 
 Bootstrap to the start of init.init. took 0.03s
 Early init. took 0.00s
-Loader init. took 0.03s
+Loader init. took 0.02s
 Loading error handling. took 0.02s
-Loading script. took 0.14s
+Loading script. took 0.19s
 Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
-Running init code. took 0.03s
+Running init code. took 0.04s
 Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.02s
@@ -19,18 +19,18 @@ Backing up script files to 'C:\\Users\\alexs\\AppData\\Roaming/RenPy/backups\\Wa
 Dump and make backups. took 0.04s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.01s
+Initial gc. took 0.02s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object. took 0.22s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -45,111 +45,14 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 537.42'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1040, 585) drawable=(1040, 585)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Screen sizes: virtual=(1920, 1080) physical=(958, 1000) drawable=(958, 1000)
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 154.55s
+Bootstrap to the start of init.init. took 26.97s
 Early init. took 0.00s
 Loader init. took 0.02s
 Loading error handling. took 0.02s
-Loading script. took 0.09s
-Loading save slot metadata. took 0.02s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.21s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 537.42'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(958, 539) drawable=(958, 539)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 169.92s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.09s
-Loading save slot metadata. took 0.02s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Dump and make backups. took 0.03s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.20s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 537.42'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(958, 539) drawable=(958, 539)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 183.97s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.12s
+Loading script. took 0.10s
 Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
 Running init code. took 0.02s
@@ -161,13 +64,13 @@ Backing up script files to 'C:\\Users\\alexs\\AppData\\Roaming/RenPy/backups\\Wa
 Dump and make backups. took 0.04s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.03s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.20s
+Creating interface object. took 0.19s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
@@ -177,7 +80,7 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.05s
+Interface start. took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -187,14 +90,14 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 537.42'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(958, 539) drawable=(958, 539)
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 191.97s
+Bootstrap to the start of init.init. took 34.81s
 Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.12s
+Loader init. took 0.03s
+Loading error handling. took 0.01s
+Loading script. took 0.11s
 Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
 Running init code. took 0.02s
@@ -210,19 +113,19 @@ Initial gc. took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.24s
+Creating interface object. took 0.19s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
-Prepare screens took 0.04s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.04s
+Interface start. took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -232,12 +135,12 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 537.42'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(958, 539) drawable=(958, 539)
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 211.99s
+Bootstrap to the start of init.init. took 44.12s
 Early init. took 0.00s
-Loader init. took 0.02s
+Loader init. took 0.03s
 Loading error handling. took 0.01s
 Loading script. took 0.11s
 Loading save slot metadata. took 0.02s
@@ -267,51 +170,6 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 537.42'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(958, 539) drawable=(958, 539)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 331.92s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.01s
-Loading script. took 0.12s
-Loading save slot metadata. took 0.02s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\alexs\\AppData\\Roaming/RenPy/backups\\WacBonalds':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
 Interface start. took 0.05s
 
 Initializing gl2 renderer:
@@ -322,17 +180,44 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 537.42'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(958, 539) drawable=(958, 539)
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 359.48s
+Bootstrap to the start of init.init. took 73.92s
 Early init. took 0.00s
-Loader init. took 0.02s
+Loader init. took 0.03s
 Loading error handling. took 0.01s
-Loading script. took 0.12s
+Loading script. took 0.11s
 Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
-Running init code. took 0.02s
+
+File "game/story/chapter5.rpy", line 80: invalid syntax
+    accused_info = [accused]"'s kitties were split amongst the remaining WacBonald's workers. [w2.name] missed them very much - so much so that he escaped jail to recollect them. He stole them from you and your coworkers' humble abodes in the middle of the night, and went on to live a nomad life in the forest with all of his twelve and a half kitties."
+                             ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start. took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 537.42'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 78.58s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.01s
+Loading script. took 0.10s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
 Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.02s
@@ -341,11 +226,11 @@ Backing up script files to 'C:\\Users\\alexs\\AppData\\Roaming/RenPy/backups\\Wa
 Dump and make backups. took 0.04s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.03s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.20s
+Creating interface object. took 0.18s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
@@ -367,14 +252,14 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 537.42'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(958, 539) drawable=(958, 539)
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 382.54s
+Bootstrap to the start of init.init. took 139.25s
 Early init. took 0.00s
 Loader init. took 0.02s
-Loading error handling. took 0.01s
-Loading script. took 0.10s
+Loading error handling. took 0.02s
+Loading script. took 0.11s
 Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
 Running init code. took 0.02s
@@ -382,23 +267,24 @@ Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.02s
 Index archives took 0.00s
+Backing up script files to 'C:\\Users\\alexs\\AppData\\Roaming/RenPy/backups\\WacBonalds':
 Dump and make backups. took 0.04s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.21s
+Creating interface object. took 0.24s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
 Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.01s
 Running _start took 0.00s
 Performance test:
 Interface start. took 0.05s
@@ -411,5 +297,307 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 537.42'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(958, 539) drawable=(958, 539)
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 218.78s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.10s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\alexs\\AppData\\Roaming/RenPy/backups\\WacBonalds':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.18s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 537.42'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 245.28s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.01s
+Loading script. took 0.11s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\alexs\\AppData\\Roaming/RenPy/backups\\WacBonalds':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 537.42'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+
+Full traceback:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1428, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1391, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 733, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\extras.py", line 258, in _duplicate
+    return renpy.text.text.Text(string, style=self.style, **self.properties)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1633, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1763, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'accused_info'
+
+While running game code:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+KeyError: 'accused_info'
+
+Full traceback:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1428, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1391, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 733, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\extras.py", line 258, in _duplicate
+    return renpy.text.text.Text(string, style=self.style, **self.properties)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1633, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1763, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'accused_info'
+
+While running game code:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+KeyError: 'accused_info'
+
+Full traceback:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1428, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1391, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 733, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\extras.py", line 258, in _duplicate
+    return renpy.text.text.Text(string, style=self.style, **self.properties)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1633, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1763, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'accused_info'
+
+While running game code:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+KeyError: 'accused_info'
+
+Full traceback:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1428, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1391, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 733, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\extras.py", line 258, in _duplicate
+    return renpy.text.text.Text(string, style=self.style, **self.properties)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1633, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1763, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'accused_info'
+
+While running game code:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+KeyError: 'accused_info'
+
+Full traceback:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1428, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1391, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\exports.py", line 733, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\extras.py", line 258, in _duplicate
+    return renpy.text.text.Text(string, style=self.style, **self.properties)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1633, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1763, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'accused_info'
+
+While running game code:
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+KeyError: 'accused_info'
+Resetting cache.
+Bootstrap to the start of init.init. took 447.77s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.01s
+Loading script. took 0.11s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\alexs\\AppData\\Roaming/RenPy/backups\\WacBonalds':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.19s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 537.42'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(810, 456) drawable=(810, 456)
 Maximum texture size: 4096x4096

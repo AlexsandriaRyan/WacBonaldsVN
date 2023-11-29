@@ -13,7 +13,9 @@ label talk_mean:
     else:
         jump mean_0
 
-# ---------- 2 Conversations Remaining ----------
+
+
+# ---------- 3 Conversations Remaining ----------
 
 label mean_3:
     show mean normal at center
@@ -42,7 +44,7 @@ label mean_3:
 
     menu:
         "I gather you're not exactly happy with me...":
-            w3.c "THAT is the textbook definition of UNDERSTATEMENT."
+            w3.c "{i}That{/i} is the textbook definition of UNDERSTATEMENT."
 
         "I'm... gonna leave.":
             jump mean_3_fail
@@ -90,7 +92,7 @@ label mean_3_fail:
     # Double-check that the conversation variables align.
     # This prevents the variables from updating again if the 
     # player selects the "back" option
-    if w3.conversations == 2:
+    if w3.conversations == 3:
         $ w3.conversations -= 1
         $ p.conversations_had += 1
     
@@ -117,7 +119,7 @@ label mean_3_pass:
     # Double-check that the conversation variables align.
     # This prevents the variables from updating again if the 
     # player selects the "back" option
-    if w3.conversations == 2:
+    if w3.conversations == 3:
         $ w3.conversations -= 1
         $ p.conversations_had += 1
         $ p.innocence += 1
@@ -163,6 +165,7 @@ label mean_2:
     pause(1.0)
 
     show mean sad at center
+    with dissolve
     
     menu:
         "You notice him starting to soften."
@@ -186,7 +189,7 @@ label mean_2_fail:
 
     show mean cry 2 at center
 
-    w3.c "You RUINED my LIFE.. you... you FREAK!"
+    w3.c "You {i}ruined{/i} my {i}life{/i}... you... you FREAK!"
 
     pause(1.0)
 
@@ -278,7 +281,7 @@ label mean_2_pass:
 # ---------- 1 Conversations Remaining ----------    
 
 label mean_1:
-    show neutral normal at center
+    show mean normal at center
     with dissolve
 
     menu:
@@ -322,7 +325,7 @@ label mean_1:
 
         "[w2.name]":
             show mean happy
-            w3.c "What? [w1.name]? Don't get me wrong, he's definitely odd, but I wouldn't think he'd be capable of that."
+            w3.c "What? [w2.name]? Don't get me wrong, he's definitely odd, but I wouldn't think he'd be capable of that."
             jump mean_1_pass
 
         "[w3.name]":
@@ -369,7 +372,7 @@ label mean_1_pass:
 
     w3.c "Either way, whether it's you or anyone else... we should be careful with who we speak to."
     w3.c "Including you..."
-    pause(2.0)
+    w3.c "..."
     w3.c "...and myself."
 
     "He gives a little sigh and gets back to scrolling on his phone."
@@ -381,7 +384,7 @@ label mean_1_pass:
     # This prevents the variables from updating again if the 
     # player selects the "back" option
     if w3.conversations == 1:
-        $ w2.conversations -= 1
+        $ w3.conversations -= 1
         $ p.conversations_had += 1
         $ p.innocence += 1
 

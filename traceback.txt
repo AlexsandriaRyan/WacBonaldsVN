@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/chapter3.rpy", line 216, in script
-    show text "{color=#f00}HOW TO PLAY:{/color}\n{color=#fff}Take part in 10 conversations with your fellow coworkers.\nCollect evidence to prove your innocence by selecting the right dialogue options."{/color}
-SyntaxError: invalid syntax (<none>, line 1)
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+KeyError: 'accused_info'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/chapter3.rpy", line 216, in script
-    show text "{color=#f00}HOW TO PLAY:{/color}\n{color=#fff}Take part in 10 conversations with your fellow coworkers.\nCollect evidence to prove your innocence by selecting the right dialogue options."{/color}
+  File "game/story/end.rpy", line 133, in script
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
   File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1428, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1391, in show_imspec
@@ -18,19 +18,23 @@ Full traceback:
     if not base.find_target() and renpy.config.missing_show:
   File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 421, in find_target
     self.target = target._duplicate(a)
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\extras.py", line 256, in _duplicate
-    string = renpy.python.py_eval(param)
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1151, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1088, in py_compile
-    raise e
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1034, in py_compile
-    raise orig_e
-  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1027, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (<none>, line 1)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\extras.py", line 258, in _duplicate
+    return renpy.text.text.Text(string, style=self.style, **self.properties)
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1633, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\text\text.py", line 1763, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\alexs\Downloads\renpy-8.1.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'accused_info'
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.3.23091805
 WacBonalds 1.0
-Thu Nov 23 21:13:04 2023
+Wed Nov 29 14:53:47 2023

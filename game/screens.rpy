@@ -290,12 +290,12 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        if main_menu:
+        if renpy.get_screen("main_menu"):
             xalign 0.5
             yalign 0.8
 
         else:
-            xoffset 60
+            xoffset 100
             yalign 0.5
 
         spacing gui.navigation_spacing
@@ -1580,6 +1580,22 @@ screen pick_character():
         hover "friend/friend_hover.png"
         align(0.95, 0.60)
         action Jump("talk_friend")
+
+screen end():
+    textbutton _("END"):
+        # button styles
+        xysize(100, 75)
+        background "#9e1010"
+        hover_background "#398011"
+        align(0.5, 0.8)
+
+        # text styles
+        text_size 24
+        text_align (0.5, 0.5)
+        text_color "#fff"
+
+        # action
+        action Return()
 
 # End Custom Screens
 
