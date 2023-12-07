@@ -1581,7 +1581,7 @@ screen pick_character():
         align(0.95, 0.60)
         action Jump("talk_friend")
 
-screen end():
+screen end_game():
     textbutton _("END"):
         # button styles
         xysize(100, 75)

@@ -7,11 +7,15 @@ label chapter5:
     scene black
     with fade
 
-    # phone ring
+    play music "ring.mp3"
+
+    pause 2.0
 
     w2.c "... I'll get it."
 
-    # phone ring stop
+    pause 2.0
+
+    stop music
 
     w2.c "... Hello?"
     w2.c "... Really?"
@@ -21,6 +25,7 @@ label chapter5:
     w2.c "... Yes, I think so."
     w2.c "... Of course. Thanks."
 
+    play music "5.mp3" volume 0.5
     scene restaurant
     with fade
 
@@ -90,12 +95,24 @@ label chapter5:
                 $ accused_info = accused + " was pissed that he went to jail. You knew that the manager was his mom, so it was very unlikely of him to have killed her! But he was a bit of a thorn in your side.\n" + accused + " eventually got out of jail after 2 years and proceeded to sue WacBonald's, the police force, and you. You don't end up in jail, but your paycheques are garnished for the rest of your life!"
 
             else:
-                $ accused_info = accused + "  eventually proves his innocence and leaves jail after 2 years. It was later revealed that the manager was his mother! How did the police not know that before sending him away? Weird.\nNonetheless, he decides to sue WacBonald's, the police force, and you! In the process, " + accused + " accused you of the manager's / his mother's murder. Even though you were innocent, you decide to run away, change your identity, and live a new life in Peru."
+                $ accused_info = accused + " eventually proves his innocence and leaves jail after 2 years. It was later revealed that the manager was his mother! How did the police not know that before sending him away? Weird.\nNonetheless, he decides to sue WacBonald's, the police force, and you! In the process, " + accused + " accused you of the manager's / his mother's murder. Even though you were innocent, you decide to run away, change your identity, and live a new life in Peru."
 
             jump accuse_w3
 
         "[w4.name]":
+            $ p.guess_murder = True
+            
+            $ b = Character("Bonald")
+
             $ accused = w4.name
+
+            $ p.innocence = 9
+            if p.innocence >= 9:
+                $ accused_info = "Bonald tried to run towards the kitchen, but you grabbed her by the shoelace, tripping her. You and your coworkers dogpile onto Bonald, preventing her from escaping.\n\nIn short, and without excrutiating detail, you all decided to batter Bonald like a gigantic Chicken WacNugget, and fry her up in the biggest fryer in the kitchen. Because she was a magical being, she survived, but now exists as a talking Chicken WacNugget that you decided to keep as a pet, similarly to a that of a hamster. The cops didn't stop you - something about \"too much paperwork.\".\n\nUpon safely leaving the WacBonald's, you go home and enjoy a peaceful life without having to work in fast food ever again!" 
+
+            else:
+                $ accused_info = "Bonald ran toward the kitchen and parkoured out the drive thru window. It was pretty rad, honestly. Bonald disappeared into her spooky sinkhole, never to be seen again.\n\nThe police safely escort you and all of your coworkers out of the WacBonald's. As soon as you reach safety, the whole building is consumed into the sinkhole.\nThe location becomes a historic monument and attracts several thousand tourists each summer. Common reasons to visit is the smell.\n\n\"It is especially putrid in July!\" - Norma from Wisconsin."
+
             jump accuse_w4
 
 label accuse_w1:
@@ -133,8 +150,6 @@ label accuse_w3:
     jump end
 
 label accuse_w4:
-    $ p.guess_murder = True
-
     show friend angry 3 at center
     with dissolve
 

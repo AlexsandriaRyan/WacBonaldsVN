@@ -1,6 +1,8 @@
 label end:
     $ police    = Character("Police")
 
+    stop music fadeout 1.0
+    pause(1.0)
     scene black
     with fade
 
@@ -8,33 +10,15 @@ label end:
     "Police begin crawling across."
     "A few of them fall into the spooky depths of the death-moat, joining the many drive-thru cars and their passengers that had met their fate hours before."
 
-    # knock sound
+    play sound "knock.mp3"
 
     police "It's the police, open up!!!"
 
-    if p.innocence <= 2:
-        jump bad_ending
+    p.c "Coming!!"
 
-    elif p.innocence >= 3 and p.innocence <= 8 and p.guess_murder == False:
-        jump incomplete_ending_1
+    "You rush over to the door to let the police into the WacBonald's."
 
-    elif p.innocence >= 3 and p.guess_murder <= 8 and p.guess_murder == True:
-        jump complete_ending
-
-    elif p.innocence >= 9 and p.guess_murder == False:
-        jump incomplete_ending_2
-    
-    elif p.innocence >= 9 and p.guess_murder == True:
-        jump good_ending
-
-
-# ---------- BAD ENDING ----------
-# less than 3 innocence
-label bad_ending:
-    w2.c "Coming, one sec."
-
-    "[w2.name] opens the door for the police to enter the WacBonald's."
-
+    play music "5.mp3" volume 0.5
     scene restaurant
     with fade
 
@@ -50,6 +34,31 @@ label bad_ending:
     police "We haven't got time to do a proper investigation, folks. We also only have one pair of handcuffs."
     police "Tell us who murdered the beloved WacBonald's manager!"
 
+    # ENDINGS:
+    # Bad ending: less than 2 innocence
+    # Incomplete ending: 3+ innocence and incorrectly guessed the murderer
+    # Good ending: 3-8 innocence  and correctly guessed the murderer
+    # Ultimate ending: 9+ innocence and correctly guessed the murderer
+
+    
+    $ p.guess_murder = True
+
+    # both the ultimate and complete endings start the same.
+    if p.innocence >= 3 and p.guess_murder == True:
+        jump complete_ending
+
+    elif p.innocence >= 3 and p.guess_murder == False:
+        jump incomplete_ending
+
+    else:
+        jump bad_ending
+    
+
+
+# ---------- BAD ENDING ----------
+# less than 3 innocence
+
+label bad_ending:
     "[w1.name], [w2.name], and [w3.name] look towards you."
 
     w3.c "[p.name] did it. No doubt about it."
@@ -83,35 +92,19 @@ label bad_ending:
     scene black
     with fade
 
-    show text "{color=#fff}You were brought to a musty little jail cell, where you withered away until death.\nYou also didn't get the chance to consume any Chicken WacNuggets during your one and only shift at WacBonald's, by the way.How cruel!{/color}\n\n{color=#f00}THE (bad) END{/color}"
+    show text "{color=#fff}You were brought to a musty little jail cell, where you withered away until death.\nYou also didn't get the chance to consume any Chicken WacNuggets during your one and only shift at WacBonald's, by the way. How cruel!{/color}\n\n{color=#f00}THE (bad) END{/color}"
     with Dissolve (2.0)
 
-    call screen end with dissolve
+    call screen end_game with dissolve
+    return
 
 
-# ---------- INCOMPLETE ENDING 1----------
+# ---------- INCOMPLETE ENDING ----------
 # 3-8 innocence
-label incomplete_ending_1:
-    p.c "Coming!!"
+# player does not correctly guess the murderer
 
-    "You rush over to the door to let the police into the WacBonald's."
-
-    scene restaurant
-    with fade
-
-    show neutral normal at right
-    with moveinleft
-    
-    show mean normal at left
-    with moveinleft
-
-    show shy worried at center
-    with moveinleft
-
-    police "We haven't got time to do a proper investigation, folks. We also only have one pair of handcuffs."
-    police "Tell us who murdered the beloved WacBonald's manager!"
-
-    p.c "It was [accused]"
+label incomplete_ending:
+    p.c "It was [accused]."
 
     if accused != w1.name:
         w1.c "Y-yeah... I believe it was [accused], too."
@@ -125,52 +118,117 @@ label incomplete_ending_1:
     scene black
     with fade
     
-    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}(one of) THE (incomplete) END(s){/color}"
+    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n\n[accused_info]{/color}\n\n{color=#f00}THE (incomplete) END{/color}"
     with Dissolve (2.0)
 
-    call screen end with dissolve
+    call screen end_game with dissolve
+    return
+
 
 
 # ---------- COMPLETE ENDING ----------
 # 3-8 innocence
-# player chooses work friend to die
+# player correctly guesses the murderer
+
 label complete_ending:
+    hide shy
+    with dissolve
 
+    hide neutral
+    with dissolve
+
+    hide mean
+    with dissolve
+
+    "You hesitate to say it. The one person who offerered a mediocre workplace friendship (and sometimes expressed concerning behaviour)... you care a little bit, but you have to do what you think is right!"
+
+    p.c "It was [accused]."
+
+    stop music fadeout 1.0
+    pause(1.0)
+    play music "1.mp3" volume 0.5
+
+    b "Well, well, well..."
+
+    show bonald neutral at center
+    with dissolve
+
+    b "You found me out, [p.name]."
+
+    w1.c "Is... is that Bonald WacBonald???"
+
+    w2.c "No way..."
+
+    w3.c "{i}THE{/i} BONALD WACBONALD?"
+
+    "You are confused. Who the hell is Bonald and why do they look like [w4.name] with gaudy clown makeup... and a suit?"
+
+    show bonald bored 1
+
+    b "You have no idea who I am, do you, [p.name]?"
+
+    show bonald bored 2
+
+    b "Well then..."
+
+    show bonald angry 1
+
+    b "I'll have you know, I didn't plan for it to go like this. I've been going broke and decided to commit tax fraud."
+
+    p.c "You didn't plan to kill the manager??? You were going to frame me!"
+
+    show bonald happy
+
+    b "The manager? She knew too much - when I went to the washroom, she noticed my hair looked much like {i}the{/i} Bonald WacBonald's. AKA me."
+
+    b "I had no other choice but to do what was necessary!"
+
+    show bonald neutral
+
+    b "Anyway, my original plan was to simply sink the building into the sinkhole I made. I planned on making sure everyone was rescued first, of course."
+
+    show bonald angry 2
+    
+    b "Until {i}you{/i} figured me out and got me caught up in all this hullabaloo."
+
+    p.c "You {i}made{/i} the sinkhole??? The same one with all the creepy voices that swallowed up all the drive thru customers???"
+
+    show bonald bored 2
+
+    b "As soon as I accepted to become the WacBonald's mascot, I was given God-like powers. Duh. I can do pretty much anything I want."
+    
+    show bonald bored 1 
+    b "Obviously I don't want to use those powers all willy-nilly, else I'd be in a predicament like this!"
+
+    show bonald happy
+
+    b "Anyhow, adios amigos! I may not have been able to claim fraud this time, but I can surely escape!"
+
+    hide bonald
+    with moveoutleft
 
     scene black
     with fade
 
-    show text "{color=#fff}\n{/color}\n\n{color=#f00}THE (sort-of complete) END{/color}"
-    with Dissolve (2.0)
+    if p.innocence >= 9:
+        jump ultimate_ending
+    
+    else:
+        show text "{color=#fff}[accused_info]{/color}\n{color=#fff}\n{/color}\n{color=#f00}THE END{/color}\n... or is it?"
+        with Dissolve (2.0)
 
-    call screen end with dissolve
+        call screen end_game with dissolve
+        return
 
 
-# ---------- INCOMPLETE ENDING 2 ----------
+
+# ---------- ULTIMATE ENDING ----------
 # 9-10 innocence
-# player does not choose work friend to die
-label incomplete_ending_2:
+# player correctly guesses the murderer
+label ultimate_ending:
 
-
-
-    scene black
-    with fade
-
-    show text "{color=#fff}The police escort [accused] out of the WacBonald's restaurant.\n{/color}\n{color=#f00}[accused_info]\n\n(one of) THE (incomplete) END(s){/color}"
-    with Dissolve (2.0)
-
-    call screen end with dissolve
-
-
-# ---------- GOOD ENDING ----------
-# 9-10 innocence
-# player chooses work friend to die
-label good_ending:
-
-    scene black
-    with fade
-
-    show text "{color=#fff}\n{/color}\n{color=#f00}THE (good) END{/color}"
+    show text "{color=#fff}[accused_info]{/color}\n{color=#fff}\n{/color}\n{color=#f00}THE END{/color}"
     with Dissolve (2.0)
     
-    call screen end with dissolve
+    call screen end_game with dissolve
+    return

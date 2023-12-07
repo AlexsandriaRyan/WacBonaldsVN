@@ -1,4 +1,22 @@
-﻿init python:
+﻿# resources:
+# character assets : created with Sutemo
+# amongus.mp3 : https://tuna.voicemod.net/sound/c4ba023d-fa12-4473-8f56-c167d47df425
+# bell.mp3 : https://freesound.org/people/deleted_user_13744718/sounds/623667/
+# knock.mp3 : https://freesound.org/people/LPHypeR/sounds/500994/
+# creak.mp3 : https://freesound.org/people/HerbertBoland/sounds/29692/
+# explosion.mp3 : https://freesound.org/people/AENHS/sounds/607049/
+# plop.mp3 : https://freesound.org/people/acclivity/sounds/19988/
+# voices.mp3 : https://freesound.org/people/Serithi/sounds/151616/
+# ring.mp3 : https://pixabay.com/sound-effects/telephonering-6384/
+# nuggets.png : iStock-171590269
+# customer.png : iStock-1220339777
+# customer angry.png : iStock-1220339777 with modifications
+# restaurant.png : https://pixabay.com/photos/beijing-airport-airport-the-room-2379526/
+# rupaul.png : https://www.shutterstock.com/image-photo/los-angeles-mar-16-rupaul-andre-1047755632
+
+
+
+init python:
 
     class Player:
         def __init__(self, character, name, innocence = 0, conversations_had = 0, cat = False, mom = False, crazy = False, guess_murder = False):
