@@ -106,7 +106,6 @@ label chapter5:
 
             $ accused = w4.name
 
-            $ p.innocence = 9
             if p.innocence >= 9:
                 $ accused_info = "Bonald tried to run towards the kitchen, but you grabbed her by the shoelace, tripping her. You and your coworkers dogpile onto Bonald, preventing her from escaping.\n\nIn short, and without excrutiating detail, you all decided to batter Bonald like a gigantic Chicken WacNugget, and fry her up in the biggest fryer in the kitchen. Because she was a magical being, she survived, but now exists as a talking Chicken WacNugget that you decided to keep as a pet, similarly to a that of a hamster. The cops didn't stop you - something about \"too much paperwork.\".\n\nUpon safely leaving the WacBonald's, you go home and enjoy a peaceful life without having to work in fast food ever again!" 
 
